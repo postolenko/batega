@@ -15,22 +15,100 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.fancybox.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/swiper.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/player.css">
-	<!-- <link rel="stylesheet" type="text/css" href="vendors/css/select2.css"> -->
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
 	<script type="text/javascript" src="slick/slick.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="vendors/js/swiper.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="vendors/js/mediaelement-and-player.js"></script>
-	<!-- <script type="text/javascript" src="vendors/js/select2.js"></script> -->
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </head>
 
 <body>
 
 	<div class="wrapper">
+
+	<!-- Popups -->
+
+	<div class="popup_wrapp scroll" data-popup ="popup_1">
+		<button type="button" class="close-popup">
+			<span></span>
+			<span></span>
+		</button>
+		<div class="popup">
+			<div class="form_wrapp">
+				<div class="form_inner">
+					<h3>Получите <span class="gold">бесплатные</span> образцы</h3>
+					<div class="inputs_wrapp">
+						<div class="input_wrapp">
+							<input type="text" name="name" placeholder="Укажите ваше имя">
+						</div>
+						<div class="input_wrapp">
+							<input type="tel" name="name" placeholder="Укажите номер телефона">
+						</div>
+					</div>
+					<div class="file-upload">
+						<input type="file" name="file" id="file">
+						<label for="file"><i class="upload_icon"></i>Приложить визуализацию</label>
+					</div>
+					<button type="submit" class="green-pill">Получить образцы</button>
+					<p class="p-desc">Я согласен с политикой обработки <a href="#">персональных данных</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup_wrapp scroll" data-popup="popup_2">
+		<button type="button" class="close-popup">
+			<span></span>
+			<span></span>
+		</button>
+		<div class="popup">
+			<div class="form_wrapp">
+				<div class="form_inner">
+					<h3>Узнайте <span class="gold">стоимость</span></h3>
+					<div class="inputs_wrapp">
+						<div class="input_wrapp">
+							<input type="text" name="name" placeholder="Укажите ваше имя">
+						</div>
+						<div class="input_wrapp">
+							<input type="tel" name="name" placeholder="Укажите номер телефона">
+						</div>
+					</div>
+					<button type="submit" class="green-pill">Узнать стоимлсть</button>
+					<p class="p-desc">Я согласен с политикой обработки <a href="#">персональных данных</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup_wrapp scroll" data-popup ="popup_3">
+		<button type="button" class="close-popup">
+			<span></span>
+			<span></span>
+		</button>
+		<div class="popup">
+			<div class="form_wrapp">
+				<div class="form_inner">
+					<h3></h3>
+					<div class="inputs_wrapp">
+						<div class="input_wrapp">
+							<input type="text" name="name" placeholder="Укажите ваше имя">
+						</div>
+						<div class="input_wrapp">
+							<input type="tel" name="name" placeholder="Укажите номер телефона">
+						</div>
+					</div>
+					<button type="submit" class="green-pill">Отправить</button>
+					<p class="p-desc">Я согласен с политикой обработки <a href="#">персональных данных</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- /Popups -->
 
 	<!-- Header -->
 		
@@ -62,7 +140,7 @@
 					</div>
 					<div class="col col-4">
 						<p><a class="tel-link" href="tel:+7495685‑46-55">+7 495 685‑46-55</a></p>
-						<p><a class="header-link" href="#">Заказать звонок</a></p>
+						<p><a class="header-link show_popup" href="#" data-popup-name ="popup_3">Заказать звонок</a></p>
 					</div>
 				</div>
 			</div>
@@ -110,7 +188,7 @@
 								<li>Бесплатный подбор и выезд с образцами</li>
 							</ol>
 
-							<a href="#" class="green-pill">Получить образцы</a>
+							<a href="#" class="green-pill show_popup" data-popup-name = "popup_1">Получить образцы</a>
 
 						</div>
 
@@ -122,7 +200,7 @@
 
 				<!-- Section 2 -->
 
-				<section>
+				<section class="section-2">
 					
 					<div class="row">
 
@@ -166,7 +244,7 @@
 
 				<!-- Section 3 -->
 
-				<section class="grey-bg">
+				<section class="section-3 grey-bg">
 					
 					<div class="row">
 
@@ -574,7 +652,7 @@
 								<h3>Нашли нужный эффект? Узнайте стоимость <span class="gold">прямо сейчас!</span></h3>
 							</div>
 							<div class="col col-2">
-								<a href="#" class="green-pill">Узнать стоимость</a>
+								<a href="#" class="green-pill show_popup" data-popup-name = "popup_2">Узнать стоимость</a>
 							</div>
 						</div>
 
@@ -618,7 +696,7 @@
 
 				<!-- Section 7 -->
 
-				<section>
+				<section class="section-7">
 					
 					<h2>Галерея выполненных проектов</h2>
 
@@ -728,7 +806,7 @@
 
 				<!-- Section 9 -->
 
-				<section>
+				<section class="section-9">
 
 					<div class="row">
 
@@ -851,7 +929,7 @@
 
 				<!-- Section 11 -->
 
-				<section>
+				<section class="section-11">
 
 					<div class="row">
 
@@ -943,7 +1021,7 @@
 
 				<!-- Section 13 -->
 
-				<!-- <section class="section-13">
+				<section class="section-13">
 
 					<div class="row">
 
@@ -952,17 +1030,16 @@
 
 						<div class="thumbnails_wrapp">
 							
-							<div class="thumbnails_4 offset-ziro">
+							<div class="thumbnails_4 clearfix">
 								
 								<div class="thumb_4">
 									<div class="col col-1">
 										<p>1</p>
 									</div>
 									<div class="col col-2">
-										<p><a href="#">Консультация с технологом</a>, подбор нужных образцов и эффектов</p>
+										<p><a href="#" class="dash-link">Консультация с технологом</a>, подбор нужных образцов и эффектов</p>
 									</div>
 								</div>
-
 								<div class="thumb_4">
 									<div class="col col-1">
 										<p>2</p>
@@ -971,7 +1048,6 @@
 										<p>Выезд к вам на проект или приглашение в нашу студию</p>
 									</div>
 								</div>
-
 								<div class="thumb_4">
 									<div class="col col-1">
 										<p>3</p>
@@ -980,7 +1056,6 @@
 										<p>Выбор нужного эффекта, согласование стоимости и сроков, предоплата</p>
 									</div>
 								</div>
-
 								<div class="thumb_4">
 									<div class="col col-1">
 										<p>4</p>
@@ -989,7 +1064,6 @@
 										<p>Доставка материалов, нанесение или обучение ваших  мастеров при необходимости</p>
 									</div>
 								</div>
-
 								<div class="thumb_4">
 									<div class="col col-1">
 										<p>5</p>
@@ -998,26 +1072,12 @@
 										<p>Принимайте материалы, проверяйте работу. Доплата по договору.</p>
 									</div>
 								</div>
-
 								<div class="thumb_4 single">
 									<p><span class="gold">Достойный результат</span> с нужным эффектом и граммотным нанесением</p>
 								</div>
-
 							</div>
 
 						</div>
-
-					</div>
-
-				</section> -->
-
-				<!-- /Section 13 -->
-
-				<!-- Section 14 -->
-
-				<!-- <section class="section-14">
-
-					<div class="row">
 
 						<div class="article-two-cols_2  clearfix">
 							<div class="thumbnails_5 offset-ziro">
@@ -1043,9 +1103,9 @@
 								</div>
 							</div>
 							<div class="col col-1 left">
-								<div class="form_wrapp form_wrapp_3">
+								<div class="form_wrapp form_wrapp_3 form_wrapp_3_2">
 									<div class="form_inner">
-										<h3>Узнайте стоимость штукатурки для вашего проекта <span class="gold">со скидкой</span></h3>
+										<h3><span class="gold">Бесплатно</span> получите образцы и расчет сметы</h3>
 										<div class="inputs_wrapp">
 											<div class="input_wrapp">
 												<input type="text" name="name" placeholder="Укажите ваше имя">
@@ -1060,57 +1120,63 @@
 								</div>
 							</div>
 							<div class="col col-2 right">
-								<h2><span class="gold">Сэкономьте ваше время!</span></h2>
-								<p class="p-1">Получите бесплатные образцы итальянской штукатурки и расчет сметы</p>
-								<p>Подберем эффект и фактуру штукатурки или краски под ваш интерьер и составим смету в 3х вариантах</p>
+								<div class="center-article">
+									<h2><span class="gold">Сэкономьте ваше время!</span></h2>
+									<p class="p-1">Получите бесплатные образцы итальянской штукатурки и расчет сметы</p>
+									<p>Подберем эффект и фактуру штукатурки или краски под ваш интерьер и составим смету в 3х вариантах</p>
+								</div>
 							</div>
 						</div>
 
 					</div>
 
-				</section> -->
+				</section>
 
-				<!-- /Section 14 -->
+				<!-- /Section 13 -->
 
 				<!-- Section 14 -->
 
-				<!-- <section>
-
-					<div id="map"></div>
-					<div class="row">
-						<div class="contacts">
-							<div class="contact">
-								<div class="col col-1">
-									<i class="map-marker"></i>
-								</div>
-								<div class="col col-2">
-									<p>Ждем вас в шоу-руме:</p>
-									<p class="p-1">г. Москва, Дмитровское шоссе, 100, стр. 2</p>
-								</div>
-							</div>
-							<div class="contact">
-								<div class="col col-1">
-									<i class="map-marker"></i>
-								</div>
-								<div class="col col-2">
-									<p>Звоните:</p>
-									<p><a href="tel:+7495685‑4655">+7 495 685‑46-55</a></p>
-									<a href="#" class="dash-link">Заказать звонок</a>
-								</div>
-							</div>
-							<div class="contact">
-								<div class="col col-1">
-									<i class="map-marker"></i>
-								</div>
-								<div class="col col-2">
-									<p>Пишите:</p>
-									<p><a href="mail:info@batega.ru">info@batega.ru</a></p>
+				<section class="contacts-sect">
+					<div class="map_wrapp">
+						<div id="map"></div>
+						<div class="contacts_wrapp">
+							<div class="row offset-ziro">
+								<div class="contacts">
+									<div class="contacts_inner">
+										<div class="contact">
+											<div class="col col-1">
+												<i class="map-marker"></i>
+											</div>
+											<div class="col col-2">
+												<p>Ждем вас в шоу-руме:</p>
+												<p class="p-1">г. Москва, Дмитровское шоссе, 100, стр. 2</p>
+											</div>
+										</div>
+										<div class="contact">
+											<div class="col col-1">
+												<i class="phone"></i>
+											</div>
+											<div class="col col-2">
+												<p>Звоните:</p>
+												<p><a href="tel:+7495685‑4655">+7 495 685‑46-55</a></p>
+												<p><a href="#" class="dash-link">Заказать звонок</a></p>
+											</div>
+										</div>
+										<div class="contact">
+											<div class="col col-1">
+												<i class="letter"></i>
+											</div>
+											<div class="col col-2">
+												<p>Пишите:</p>
+												<p><a href="mail:info@batega.ru">info@batega.ru</a></p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
-				</section> -->
+				</section>
 
 				<!-- /Section 14 -->
 
@@ -1148,6 +1214,9 @@
 
 		<script src="js/scripts.js"></script>
 		<script src="js/additional_scripts.js"></script>
+		<script src="js/map.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoGWEyUlxHOSfMgm2TliQLggP3mej7d_I&callback=initMap" async defer></script>
+
 	
 	</div>
 

@@ -60,32 +60,6 @@ $(document).ready(function() {
 
 	});
 
-	// var testimonials = new Swiper('.testimonial-slider', {
-	//     loop: true,
-	//     speed: 1400,
-	//     effect: 'coverflow',
-	//     grabCursor: true,
-	//     centeredSlides: true,
-	//     slidesPerView: 'auto',
-	//     coverflowEffect: {
-	//         rotate: 0,
-	//         stretch: 0,
-	//         depth: 145,
-	//         modifier: 1,
-	//         slideShadows : false
-	//     },
-	//     pagination: {
-	// 		el: '.testimonial_pagination',
-	// 		type: 'bullets',
-	// 		clickable: true
-	// 	},
-	//     navigation: {
-	// 		nextEl: '.testimonial-next',
-	// 		prevEl: '.testimonial-prev',
-	// 		clickable: true
-	// 	},
-	//   });
-
 	$(".testimonial-slider").not(".slick-initialized").slick({
         dots: true,
         arrows: true,

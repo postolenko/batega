@@ -6,18 +6,7 @@ bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 
 $(window).load(function() {
 
-    // $("select").each(function() {
-
-    //     var parentBlock = $(this).closest(".select-block");
-
-    //     parentBlock.find(".select2-container").css({
-    //         "width" : parentBlock.width() + "px"
-    //     });
-
-    // });
-
     getPromoPaddingTop();
-
 
 });
 
@@ -29,93 +18,68 @@ $(window).resize(function() {
 
 $(document).ready(function() {
 
-   //  var hiddenTabs;
+    $(function() {
 
-   // $(".tab-link").click(function(e) {
+        $(".show_popup").click(function(e) {
 
-   //      var parentBlock = $(this).closest(".tab-nav");
+            e.preventDefault();
 
-   //      var tabsName = parentBlock.attr("data-tabs-nav");
+            popupName = $(this).attr("data-popup-name");
+            popupBlock = $("[data-popup = '"+ popupName +"']");
 
-   //      var tabs = $(".tabs-content[data-tabs = '"+ tabsName +"']");
+            popupBlock.fadeIn(400);
 
-   //      e.preventDefault();
+            // popupBox = popupBlock.find(".popup");
 
-   //      var indexTab = $(this).attr("data-tab-index");
+            // popupBox.css({
+            //     "top" : ( $(window).height() - popupBox.outerHeight() ) / 2 + "px"
+            // });
 
-   //      var tabHeightWrapp = tabs.find(".tab-height");
+        });
 
-   //      if( !$(this).hasClass("active") ) {
+         $(this).keydown(function(eventObject){
 
-   //          $(".tab-link").removeClass("active");
+            if (eventObject.which == 27) {
 
-   //          $(this).addClass("active");
+                if ( popupBlock.is(":visible") ) {
 
-   //          var tab = tabs.find(".tab[data-tab = '"+ indexTab +"']");
+                    popupBlock.fadeOut(300);
 
-   //          tabs.find(".tab").css({
-   //              "position" : "absolute"
-   //          });
+                }
 
-   //          tabs.find(".tab").fadeOut(300);
+            }
 
-   //          setTimeout(function() {
+        });
 
-   //              tabs.find(".tab").each(function() {
+        $(".close-popup").click(function() {
 
-   //                  if( $(this).is(":hidden") ) {
+            popupBlock = $(this).closest(".popup_wrapp");
 
-   //                      hiddenTabs = true;
+            popupBlock.fadeOut(300);
 
-   //                  } else {
+        });
 
-   //                      return false;
 
-   //                  }
+        $(document).mouseup(function (e){
 
-   //              });
+            hide_element = $('.popup');
 
-   //              if( hiddenTabs == true ) {
+            if (!hide_element.is(e.target)
 
-   //                  tab.fadeIn(300);
+                && hide_element.has(e.target).length === 0) {
 
-   //                  setTimeout(function() {
+                hide_element.closest(".popup_wrapp").fadeOut(300);
+            }
 
-   //                      if( tab.is(":visible") ) {
+        });
 
-   //                          var tabHeight = tab.outerHeight();
+    });
 
-   //                          tabHeightWrapp.animate({
-   //                              "height" : tabHeight + "px"
-   //                          },800);
+    $(function() {
 
-   //                      }
+      $("input[type='tel']").mask("+7 (999) 999-99-99");
 
-   //                  }, 300);
-
-   //              }
-
-   //          }, 700);
-
-   //          setTimeout(function() {
-
-   //              tabs.find(".tab").css({
-   //                  "position" : "relative"
-   //              });
-
-   //              tabHeightWrapp.css({
-   //                  "height" : "auto"
-   //              });
-
-   //          }, 4000);
-
-   //      } else {
-
-   //          return false;
-
-   //      }
-
-   // });
+    });
 
 });
 

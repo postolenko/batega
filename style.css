@@ -646,8 +646,9 @@ textarea:focus {
 .logo {
     display: inline-table;
     vertical-align: top;
-    width: 100%;
-    max-width: 335px;
+ /*   width: 100%;
+    max-width: 335px;*/
+    width: 334px;
 }
 
 .logo .img_wrapp {

@@ -631,8 +631,28 @@ textarea:focus {
     z-index: 2;
 }
 
+.header:before {
+    content: "";
+    width: 100%;
+    height: 263px;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.38) 34%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.38) 34%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.38) 34%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=0 );
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3
+}
+
+.header.header_inner:before {
+    height: 207px;
+}
+
 .header-row {
     border-bottom: 1px solid rgba(255, 255, 255, .25);
+    position: relative;
+    z-index: 4;
 }
 
 .header-row-1 {
@@ -897,6 +917,23 @@ textarea:focus {
     color: #e9ba5f;
 }
 
+.header_inner {
+    background-color: #000000;
+}
+
+.header_inner:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-image: url(img/header_bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 /*-------------------------------------------*/
 /* ----- CONTENT ------ */
 /*-------------------------------------------*/
@@ -910,19 +947,6 @@ textarea:focus {
     background-position: center top;
     background-repeat: no-repeat;
     position: relative;
-}
-
-.promo:before {
-    content: "";
-    width: 100%;
-    height: 263px;
-    background: -moz-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.38) 34%, rgba(0,0,0,0) 100%);
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.38) 34%,rgba(0,0,0,0) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.38) 34%,rgba(0,0,0,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=0 );
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .promo .row {
@@ -2497,6 +2521,50 @@ section.light p {
 }
 
 /*-- /Section 14 --*/
+
+/*-- Section 1 TY - Page --*/
+
+.succes_page {
+
+}
+
+.succes_page .row {
+    position: relative;
+}
+
+.succes_content {
+    max-width: 665px;
+    margin-top: 150px;
+    position: relative;
+    z-index: 2;
+}
+
+.succes_content h1 {
+    padding: 7px 0;
+}
+
+.succes_content p {
+    padding: 7px 0;
+}
+
+.succes_content .green-pill {
+    margin: 44px 0 20px 0;
+}
+
+.succes_img {
+    display: block;
+    width: auto;
+    height: auto;
+    position: absolute;
+    /*top: 128px;*/
+    top: 50%;
+    right: -16%;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+/*-- /Section 1 TY - Page --*/
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */

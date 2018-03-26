@@ -93,7 +93,7 @@ function getTabParams() {
 
 function getPromoPaddingTop() {
 
-    $(".promo").css({
+    $(".promo_box").css({
         "padding-top" : $(".header").height() + "px"
     });
 

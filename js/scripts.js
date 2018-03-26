@@ -16,7 +16,16 @@ $(window).resize(function() {
 
 });
 
+$(document).scroll(function() {
+
+  getAnimation();
+
+});
+
+
 $(document).ready(function() {
+
+    getAnimation();
 
     $(function() {
 
@@ -83,18 +92,24 @@ $(document).ready(function() {
 
 });
 
-
-function getTabParams() {
-
-
-
-}
-
-
 function getPromoPaddingTop() {
 
     $(".promo_box").css({
         "padding-top" : $(".header").height() + "px"
     });
+
+}
+
+function getAnimation() {
+
+  $("section").each(function() {
+
+    if( $(this).offset().top <= $(document).scrollTop() + $(window).height() ) {
+
+      $(this).addClass("active");
+
+    }
+
+  });  
 
 }

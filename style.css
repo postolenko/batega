@@ -2793,3 +2793,147 @@ section.light p {
 }
 
 /*-- /Popups --*/
+
+/*-- Animation --*/
+
+.leftSlice {
+    position: relative;
+    left: -3%;
+    opacity: 0;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: .6s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -moz-transition-delay: .6s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: 1s;
+    -ms-transition-delay: .6s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    -o-transition-delay: .6s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: .6s;
+    transition-timing-function: ease-in-out;
+}
+
+section.active .leftSlice {
+    left: 0;
+    opacity: 1;
+}
+
+.fadeIn {
+    opacity: 0;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: .6s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -moz-transition-delay: .6s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: 1s;
+    -ms-transition-delay: .6s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    --transition-delay: .6s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: .6s;
+    transition-timing-function: ease-in-out;
+}
+
+section.active .fadeIn {
+    opacity: 1;
+}
+
+.zoomFade {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: .6s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -moz-transition-delay: .6s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: 1s;
+    -ms-transition-delay: .6s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    --transition-delay: .6s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: .6s;
+    transition-timing-function: ease-in-out;
+}
+
+section.active .zoomFade {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+
+.fadeInUp {
+    position: relative;
+    bottom: -20px;
+    opacity: 0;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: .6s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -moz-transition-delay: .6s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: 1s;
+    -ms-transition-delay: .6s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    -o-transition-delay: .6s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: .6s;
+    transition-timing-function: ease-in-out;
+}
+
+section.active .fadeInUp {
+    bottom: 0;
+    opacity: 1;
+}
+
+/*-- /Animation --*/

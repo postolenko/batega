@@ -58,6 +58,18 @@
 
 	/*-- /Section 3 --*/
 
+	/*-- Section 7 --*/
+
+	.gallery-slider .slick-next {
+	    right: -8%;
+	}
+
+	.gallery-slider .slick-prev {
+	    left: -8%;
+	}
+
+	/*-- /Section 7 --*/
+
 	/*-- Section 13 --*/
 
 	.thumbnails_4 {
@@ -99,6 +111,22 @@
 	}
 
 	/*-- /Section 1 TY - Page --*/
+
+}
+
+@media only screen and (max-width: 1124px) {
+
+	/*-- Section 7 --*/
+
+	.gallery-slider .slick-next {
+	    right: -4%;
+	}
+
+	.gallery-slider .slick-prev {
+	    left: -4%;
+	}
+
+	/*-- /Section 7 --*/
 
 }
 
@@ -222,6 +250,31 @@
 
 	/*-- /Section 6 --*/
 
+	/*-- Section 7 --*/
+
+	.gallery-slider_wrapp:before {
+		display: none;
+	}
+
+	.gallery-slider .slick-arrow {
+		top: 100%;
+	   	margin-top: -28px;
+	}
+
+	.gallery-slider .slick-next {
+	    right: 2%;
+	}
+
+	.gallery-slider .slick-prev {
+	    left: 2%;
+	}
+
+	.gallery-slider .slick-dots {
+		padding: 0 50px;
+	}
+
+	/*-- /Section 7 --*/
+
 	/*-- Section 13 --*/
 
 	.center-article {
@@ -323,6 +376,15 @@
 	}
 
 	/*-- /Section 5 --*/
+
+	/*-- Section 7 --*/
+
+	.section-7 {
+	    padding-top: 55px;
+	    padding-bottom: 41px;
+	}
+
+	/*-- /Section 7 --*/
 
 	/*-- Section 13 --*/
 
@@ -581,20 +643,6 @@
 	}
 
 	/*- /Section 3 --*/
-
-	/*- Section 7 --*/
-
-	.swiper-button-prev,
-	.swiper-button-next {
-	    top: 639px !important;
-	    margin: 0 !important;
-	}
-
-	.gallery_pagination {
-		padding: 0 60px;
-	}
-
-	/*- /Section 7 --*/
 
 	/*- Section 9 --*/
 

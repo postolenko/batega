@@ -6,39 +6,19 @@ $(window).on("load",function(){
 
 $(document).ready(function() {
 
-	var gallery = new Swiper('.gallery-slider', {
-	    loop: true,
-	    speed: 1400,
-	    effect: 'coverflow',
-	    grabCursor: true,
-	    centeredSlides: true,
-	    slidesPerView: 'auto',
-	    coverflowEffect: {
-	        rotate: 0,
-	        stretch: 0,
-	        depth: 145,
-	        modifier: 1,
-	        slideShadows : true
-	    },
-	    pagination: {
-			el: '.gallery_pagination',
-			type: 'bullets',
-			clickable: true
-		},
-	    navigation: {
-			nextEl: '.gallery-next',
-			prevEl: '.gallery-prev',
-			clickable: true
-		},
-        breakpoints: {
-            768: {
-              slidesPerView: 1,
-              spaceBetween: 0,
-              effect: false,
-              coverflowEffect: false
-            }
-        }
-	  });
+    var gallery = $(".gallery-slider").not(".slick-initialized").slick({
+        dots: true,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        speed: 800,
+        fade: true,
+        draggable: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        draggable : true
+    });
 
 	$('.tabs-content').on('init', function(slick){
 		
@@ -63,7 +43,7 @@ $(document).ready(function() {
 	$(".testimonial-slider").not(".slick-initialized").slick({
         dots: true,
         arrows: true,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 10000,
         speed: 800,
         fade: true,

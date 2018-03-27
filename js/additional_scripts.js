@@ -44,11 +44,17 @@ $(document).ready(function() {
 
     	$("[data-tabs-desc = '"+ tabsName +"']").html(slideDesc);
 
+	});
+
+    $('.tabs-content').on('afterChange', function(event, slick, currentSlide, nextSlide){
+
+        var tabsName = $(this).attr("data-tabs");
+
         $("[data-tabs-nav = '" + tabsName + "'] .tab-link").removeClass("active");
 
-        $("[data-tabs-nav = '" + tabsName + "'] .tab-link:eq("+ nextSlide +")").addClass("active");
+        $("[data-tabs-nav = '" + tabsName + "'] .tab-link:eq("+ currentSlide +")").addClass("active");
 
-	});
+    });
 
 
 	$(".tabs-content").not(".slick-initialized").slick({

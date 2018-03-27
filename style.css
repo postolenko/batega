@@ -2638,10 +2638,6 @@ section.light p {
 
 /*-- Section 1 TY - Page --*/
 
-.succes_page {
-
-}
-
 .succes_page .row {
     position: relative;
 }
@@ -2670,7 +2666,6 @@ section.light p {
     width: auto;
     height: auto;
     position: absolute;
-    /*top: 128px;*/
     top: 50%;
     right: -16%;
     -webkit-transform: translate(0, -50%);
@@ -2735,13 +2730,11 @@ section.light p {
 .dash-link.active {
     border-bottom: 1px dashed transparent;
     color: #af945f;
-    /*color: #d53838;*/
 }
 
 .dash-link:hover {
     border-bottom: 1px dashed transparent;
     color: #af945f;
-    /*color: #d53838;*/
 }
 
 .web-studio {

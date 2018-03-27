@@ -4,6 +4,15 @@ e = d.documentElement,
 g = d.getElementsByTagName('body')[0],
 bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 
+var popupName;
+var popupBlock;
+var hide_element;
+
+var fileValArr;
+var fileName;
+var parentBlock;
+var fileNameWrapp;
+
 $(window).load(function() {
 
     getPromoPaddingTop();
@@ -37,12 +46,6 @@ $(document).ready(function() {
             popupBlock = $("[data-popup = '"+ popupName +"']");
 
             popupBlock.fadeIn(400);
-
-            // popupBox = popupBlock.find(".popup");
-
-            // popupBox.css({
-            //     "top" : ( $(window).height() - popupBox.outerHeight() ) / 2 + "px"
-            // });
 
         });
 
@@ -122,6 +125,20 @@ $(document).ready(function() {
             }
 
         });
+
+    });
+
+    $( "input[type='file']" ).change(function() {
+
+      fileValArr = $(this).val().split("\\");
+
+      fileName = fileValArr[fileValArr.length - 1];
+
+      parentBlock = $(this).closest(".file-upload");
+
+      fileNameWrapp = parentBlock.find(".file_name");
+
+      fileNameWrapp.text(fileName);
 
     });
 

@@ -4,15 +4,7 @@ $(window).on("load",function(){
 
 });
 
-$(document).ready(function() {		
-
-	// $("select").each(function() {
-
-	// 	$(this).select2({
-	// 		minimumResultsForSearch: Infinity
-	// 	});
-
-	// });
+$(document).ready(function() {
 
 	var gallery = new Swiper('.gallery-slider', {
 	    loop: true,
@@ -63,7 +55,7 @@ $(document).ready(function() {
 	$(".testimonial-slider").not(".slick-initialized").slick({
         dots: true,
         arrows: true,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 10000,
         speed: 800,
         fade: true,
@@ -79,7 +71,7 @@ $(document).ready(function() {
 	$(".tabs-content").not(".slick-initialized").slick({
         dots: true,
         arrows: false,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 10000,
         speed: 800,
         fade: true,

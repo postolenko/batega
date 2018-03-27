@@ -2596,7 +2596,6 @@ section.light p {
 
 .succes_content {
     max-width: 665px;
-    /*margin-top: 150px;*/
     padding-top: 150px;
     position: relative;
     z-index: 2;
@@ -2618,12 +2617,13 @@ section.light p {
     display: block;
     width: auto;
     height: auto;
+    max-height: 98%;
     position: absolute;
-    top: 50%;
+    top: -16px;
     right: -16%;
-    -webkit-transform: translate(0, -50%);
+/*    -webkit-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+    transform: translate(0, -50%);*/
 }
 
 /*-- /Section 1 TY - Page --*/

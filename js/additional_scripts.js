@@ -30,6 +30,14 @@ $(document).ready(function() {
 			prevEl: '.gallery-prev',
 			clickable: true
 		},
+        breakpoints: {
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+              effect: false,
+              coverflowEffect: false
+            }
+        }
 	  });
 
 	$('.tabs-content').on('init', function(slick){

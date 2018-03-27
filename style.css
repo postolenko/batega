@@ -2711,7 +2711,7 @@ section.light p {
     content: "";
     width: 89px;
     height: 24px;
-    background-image: url(img/reforge.png);
+    background-image: url(img/reforge_grey.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -2740,7 +2740,7 @@ section.light p {
     content: "";
     width: 89px;
     height: 24px;
-    background-image: url(img/reforge_grey.png);
+    background-image: url(img/reforge.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;

@@ -644,6 +644,20 @@
 
 	/*- /Section 3 --*/
 
+	.tab-link:link,
+	.tab-link:visited {
+	    color: #1c1c1c;
+	}
+
+	.tab-link:active,
+	.tab-link.active {
+	    color: #1c1c1c;
+	}
+
+	.tab-link:hover {
+	    color: #e9ba5f;
+	}
+
 	/*- Section 9 --*/
 
 	.section-9 {

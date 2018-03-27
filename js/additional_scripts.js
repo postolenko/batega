@@ -67,7 +67,6 @@ $(document).ready(function() {
         draggable: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 2,
         adaptiveHeight: true
     });
 

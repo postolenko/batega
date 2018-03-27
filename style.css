@@ -501,6 +501,16 @@ textarea:focus {
     background-position: 2px -155px;
 }
 
+.callbak {
+    display: inline-block;
+    vertical-align: top;
+    width: 32px;
+    height: 32px;
+    background-image: url(img/phone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /*-- /Icons --*/
 
 /*-- Button --*/
@@ -684,12 +694,22 @@ textarea:focus {
     text-align: right;
 }
 
+.header-row-1 .col-5 {
+    display: none;
+    width: 14%;
+    padding-right: 0;
+    text-align: right;
+}
+
 .logo {
     display: inline-table;
     vertical-align: top;
- /*   width: 100%;
-    max-width: 335px;*/
     width: 334px;
+    -webkit-transition-property: none;
+    -moz-transition-property: none;
+    -ms-transition-property: none;
+    -o-transition-property: none;
+    transition-property: none;
 }
 
 .logo .img_wrapp {
@@ -852,19 +872,20 @@ textarea:focus {
     color: #e9ba5f;
 }
 
+.callbak-link .callbak {
+    display: none;
+}
+
 .main-nav_wrapp {
     padding: 5px 0 9px 0;
+    overflow: hidden;
 }
 
 .main-nav {
-    /*display: table;*/
-    /*width: 100%;*/
     margin: 0 -36px;
 }
 
 .main-nav li {
-/*    display: table-cell;
-    vertical-align: top;*/
     display: inline-block;
     vertical-align: top;
     width: auto;
@@ -873,8 +894,6 @@ textarea:focus {
 }
 
 .main-nav li a {
-/*    display: inline-block;
-    vertical-align: top;*/
     border-bottom: 1px dashed transparent;
     font-size: 18px;
     line-height: 18px;
@@ -933,6 +952,96 @@ textarea:focus {
     background-size: cover;
     background-position: center;
 }
+
+/* ----- Responsive Menu Button ------ */
+
+.respmenubtn {
+    /*display: inline-block;*/
+    display: none;
+    vertical-align: middle;
+    width: 45px;
+    height: 37px;
+    background: transparent;
+    cursor: pointer;
+    z-index: 11;
+    position: relative;
+    top: 1px;
+    right: 0;
+    border: 1px solid transparent;
+}
+
+.respmenubtn span {
+    display: block;
+    width: 27px;
+    height: 2px;
+    background: #ffffff;
+    margin: 0 auto 7px auto;
+
+    -webkit-transition-property: transform, border, background;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: transform, border, background;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: transform, border, background;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: transform, border, background;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: transform, border, background;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.respmenubtn span:last-child {
+    margin: 0 auto;
+}
+
+.respmenubtn:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+}
+
+.respmenubtn:hover span {
+    background: #e9ba5f;;
+}
+
+.respmenubtn.active span {
+    position: relative;
+    width: 35px;
+    top: 2px;
+    left: 0;
+    background: #e9ba5f;;
+}
+
+.respmenubtn.active span:last-child {
+    display: none;
+}
+
+.respmenubtn.active span:first-child {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 3px 0 0 0;
+    position: relative;
+    top: 4px;
+    left: 5px;
+}
+
+.respmenubtn.active span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* ----- / Responsive Menu Button ------ */
 
 /*-------------------------------------------*/
 /* ----- CONTENT ------ */
@@ -1278,6 +1387,7 @@ section.light p {
     width: 180px;
     height: 180px;
     position: relative;
+    overflow: hidden;
     background: #ffffff;
 }
 
@@ -1472,13 +1582,13 @@ section.light p {
 
 .tab-nav {
     text-align: center;
-    margin: 12px -2% 9px -2%;
+    margin: 3px -2% 3px -2%;
 }
 
 .tab-link {
     display: inline-block;
     vertical-align: top;
-    margin: 0 2%;
+    margin: 9px 2%;
     cursor: pointer;
     background: transparent;
     border-top: 1px dashed transparent;
@@ -1942,8 +2052,10 @@ section.light p {
 }
 
 .testimonial .img-box {
+    width: 100%;
     max-width: 130px;
     height: 130px;
+    overflow: hidden;
     position: relative;
 }
 
@@ -2153,14 +2265,14 @@ section.light p {
 }
 
 .article-two-cols .col-1 {
-    width: 48%;
-    padding-top: 54px;
-    padding-right: 2%;
+    width: 52%;
+    padding-left: 2%;
 }
 
 .article-two-cols .col-2 {
-    width: 52%;
-    padding-left: 2%;
+    width: 48%;
+    padding-top: 54px;
+    padding-right: 2%;
 }
 
 .article-h {
@@ -2329,7 +2441,8 @@ section.light p {
 }
 
 .thumbnails_5 {
-    width: 306px;
+    width: 100%;
+    max-width: 306px;
     opacity: .3;
     position: absolute;
     top: 50%;
@@ -2342,7 +2455,7 @@ section.light p {
 .thumb-5 {
     display: inline-block;
     vertical-align: top;
-    margin: 10px;
+    margin: 8px;
 }
 
 .thumb-5 .img-box {
@@ -2370,13 +2483,13 @@ section.light p {
 }
 
 .article-two-cols_2 > .col-1 {
-    width: 57%;
-    padding-right: 1%;
+    width: 43%;
+    padding-left: 1%;
 }
 
 .article-two-cols_2 > .col-2 {
-    width: 43%;
-    padding-left: 1%;
+    width: 57%;
+    padding-right: 1%;
 }
 
 .form_wrapp_3_2 {
@@ -2428,6 +2541,7 @@ section.light p {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 .contacts_wrapp .row {
@@ -2571,7 +2685,7 @@ section.light p {
 /*-------------------------------------------*/
 
 .footer {
-    padding: 36px 0 29px 0;
+    padding: 41px 0 34px 0;
 }
 
 .footer .row-1 {
@@ -2581,7 +2695,7 @@ section.light p {
 .footer .row-1 .col {
     display: inline-block;
     vertical-align: top;
-    margin: 10px 4% 10px 0;
+    margin: 5px 4% 5px 0;
 }
 
 .logo-white:link p,
@@ -2599,7 +2713,7 @@ section.light p {
 }
 
 .footer .row-2 {
-    padding: 11px 0;
+    padding: 16px 0 5px 0;
 }
 
 .dash-link {
@@ -2706,7 +2820,7 @@ section.light p {
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, .9);
-    z-index: 10;
+    z-index: 13;
 }
 
 .close-popup {

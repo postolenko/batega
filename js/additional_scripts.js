@@ -55,7 +55,7 @@ $(document).ready(function() {
 	$(".testimonial-slider").not(".slick-initialized").slick({
         dots: true,
         arrows: true,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 10000,
         speed: 800,
         fade: true,

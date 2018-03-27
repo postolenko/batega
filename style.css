@@ -2617,7 +2617,7 @@ section.light p {
     display: block;
     width: auto;
     height: auto;
-    max-height: 98%;
+    max-height: 98vh;
     position: absolute;
     top: -16px;
     right: -16%;

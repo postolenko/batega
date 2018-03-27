@@ -54,7 +54,7 @@ $(document).ready(function() {
 	$(".tabs-content").not(".slick-initialized").slick({
         dots: true,
         arrows: false,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 10000,
         speed: 800,
         fade: true,

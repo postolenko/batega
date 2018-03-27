@@ -2660,7 +2660,7 @@ section.light p {
 }
 
 .footer .row-2 {
-    padding: 25px 0 1px 0;
+    padding: 20px 0 1px 0;
 }
 
 .dash-link {
@@ -2690,7 +2690,6 @@ section.light p {
 }
 
 .webstudio-p {
-    padding: 10px 0;
     font-family: "Lato", "Arial", "Verdana", sans-serif;
     font-size: 12px;
     line-height: 14px;
@@ -2698,10 +2697,17 @@ section.light p {
     color: #1d1d1f;
 }
 
+.webstudio-p span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .reforge {
+    display: inline-block;
+    vertical-align: middle;
     width: 89px;
     height: 24px;
-    margin: 0 0 0 7px;
+    margin: 5px 0 5px 7px;
     position: relative;
 }
 

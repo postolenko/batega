@@ -2690,6 +2690,7 @@ section.light p {
 }
 
 .webstudio-p {
+    padding: 10px 0;
     font-family: "Lato", "Arial", "Verdana", sans-serif;
     font-size: 12px;
     line-height: 14px;
@@ -2698,13 +2699,10 @@ section.light p {
 }
 
 .reforge {
-    display: inline-block;
-    vertical-align: top;
     width: 89px;
     height: 24px;
     margin: 0 0 0 7px;
     position: relative;
-    top: -5px;
 }
 
 .reforge:before {

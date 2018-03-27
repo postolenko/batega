@@ -26,7 +26,13 @@ $(document).ready(function() {
 
     	var tabsName = $(this).attr("data-tabs");
 
+        var indexSlide = $(this).find(".slick-slide.slick-active").index();
+
     	$("[data-tabs-desc = '"+ tabsName +"']").html(slideDesc);
+
+        $("[data-tabs-nav = '" + tabsName + "'] .tab-link").removeClass("active");
+
+        $("[data-tabs-nav = '" + tabsName + "'] .tab-link:eq("+ indexSlide +")").addClass("active");
 
 	});
 
@@ -38,22 +44,11 @@ $(document).ready(function() {
 
     	$("[data-tabs-desc = '"+ tabsName +"']").html(slideDesc);
 
-	});
+        $("[data-tabs-nav = '" + tabsName + "'] .tab-link").removeClass("active");
 
-	$(".testimonial-slider").not(".slick-initialized").slick({
-        dots: true,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 10000,
-        speed: 800,
-        fade: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: true,
-        appendArrows: $(".testimonials-arrows"),
-        draggable : true
-    });
+        $("[data-tabs-nav = '" + tabsName + "'] .tab-link:eq("+ nextSlide +")").addClass("active");
+
+	});
 
 
 	$(".tabs-content").not(".slick-initialized").slick({
@@ -66,6 +61,7 @@ $(document).ready(function() {
         draggable: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        initialSlide: 2,
         adaptiveHeight: true
     });
 
@@ -76,15 +72,27 @@ $(document).ready(function() {
         var parentBlock = $(this).closest(".tab-nav");
         var tabsName = parentBlock.attr("data-tabs-nav");
 
-        parentBlock.find(".tab-link").removeClass("active");
-        $(this).addClass("active");
-
         var tabIndex = $(this).index();
 
         var slickDotsNav =  $("[data-tabs = '" + tabsName + "']").find(".slick-dots");
 
         slickDotsNav.find("li:eq("+ tabIndex +") button").click();
 
+    });
+
+    $(".testimonial-slider").not(".slick-initialized").slick({
+        dots: true,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        speed: 800,
+        fade: true,
+        draggable: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        appendArrows: $(".testimonials-arrows"),
+        draggable : true
     });
 
    	$('audio').mediaelementplayer();

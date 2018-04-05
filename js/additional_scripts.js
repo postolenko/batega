@@ -13,7 +13,6 @@ $(document).ready(function() {
         autoplaySpeed: 10000,
         speed: 800,
         fade: true,
-        draggable: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,

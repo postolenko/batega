@@ -197,14 +197,14 @@ function onScroll(event){
 
     var scrollPos = $(document).scrollTop();
 
-    $('#menu-center a').each(function () {
+    $('.main-nav a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
 
         if( refElement.length > 0 ) {
 
             if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                $('#menu-center ul li a').removeClass("active");
+                $('.main-nav li a').removeClass("active");
                 currLink.addClass("active");
             }
             else{
